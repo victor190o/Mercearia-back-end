@@ -8,16 +8,13 @@ public class Pedido
 	private Cliente cliente;
 	private Funcionario funcionario;
 	private List<Produto> produtos;
-	private Double valorTotal;
 
-	public Pedido(Long id, Cliente cliente, Funcionario funcionario, List<Produto> produtos,
-		Double valorTotal)
+	public Pedido(Long id, Cliente cliente, Funcionario funcionario, List<Produto> produtos)
 	{
 		this.id = id;
 		this.cliente = cliente;
 		this.funcionario = funcionario;
 		this.produtos = produtos;
-		this.valorTotal = valorTotal;
 	}
 
 	public Long getId()
@@ -28,6 +25,18 @@ public class Pedido
 	public void setId(Long id)
 	{
 		this.id = id;
+	}
+
+	public Double getValorTotal()
+	{
+		Double valorTotal = 0.0;
+		for (Produto produto : produtos)
+		{
+			Double valorProduto = produto.getValor();
+
+			valorTotal += valorProduto;
+		}
+		return valorTotal;
 	}
 
 	public Cliente getCliente()
@@ -60,13 +69,5 @@ public class Pedido
 		this.produtos = produtos;
 	}
 
-	public Double getValorTotal()
-	{
-		return valorTotal;
-	}
 
-	public void setValorTotal(Double valorTotal)
-	{
-		this.valorTotal = valorTotal;
-	}
 }
