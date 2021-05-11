@@ -1,4 +1,4 @@
-package main.java.entity;
+package main.java.poo_project.entities;
 
 public class Funcao
 {

@@ -1,4 +1,4 @@
-package main.java.entity;
+package main.java.poo_project.entities;
 
 import java.util.Date;
 
@@ -8,6 +8,7 @@ public abstract class Pessoa
 	private String name;
 	private Date subscribeDate;
 	private String cpf;
+
 	private Endereco endereco;
 
 	public Pessoa(Long id, String name, Date subscribeDate, String cpf, Endereco endereco)
@@ -18,9 +19,7 @@ public abstract class Pessoa
 		this.cpf = cpf;
 		this.endereco = endereco;
 	}
-
-
-
+	
 	public Long getId()
 	{
 		return id;
@@ -49,6 +48,14 @@ public abstract class Pessoa
 	public void setSubscribeDate(Date subscribeDate)
 	{
 		this.subscribeDate = subscribeDate;
+	}
+	
+	public Endereco getEndereco() {
+		return endereco;
+	}
+	
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 
 }
