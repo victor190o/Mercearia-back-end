@@ -1,7 +1,15 @@
-package main.java.poo_project.entities;
+package mercearia.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Produto
 {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	private Double valor;
@@ -13,6 +21,10 @@ public class Produto
 		this.nome = nome;
 		this.valor = valor;
 		this.quantidade = quantidade;
+	}
+
+	public Produto(){
+
 	}
 
 	public Long getId()

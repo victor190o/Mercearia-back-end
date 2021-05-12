@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Catolica.iml" filepath="$PROJECT_DIR$/Catolica.iml" />
+      <module fileurl="file://$PROJECT_DIR$/marcearia-back.iml" filepath="$PROJECT_DIR$/marcearia-back.iml" />
     </modules>
   </component>
 </project>

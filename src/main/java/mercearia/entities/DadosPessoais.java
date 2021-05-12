@@ -1,33 +1,29 @@
-package main.java.poo_project.entities;
+package mercearia.entities;
 
+import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Embeddable;
 
-public abstract class Pessoa
+@Embeddable
+public abstract class DadosPessoais implements Serializable
 {
-	private Long id;
 	private String name;
 	private Date subscribeDate;
 	private String cpf;
 
 	private Endereco endereco;
 
-	public Pessoa(Long id, String name, Date subscribeDate, String cpf, Endereco endereco)
+	public DadosPessoais(String name, Date subscribeDate, String cpf, Endereco endereco)
 	{
-		this.id = id;
 		this.name = name;
 		this.subscribeDate = subscribeDate;
 		this.cpf = cpf;
 		this.endereco = endereco;
 	}
-	
-	public Long getId()
-	{
-		return id;
-	}
 
-	public void setId(Long id)
+	public DadosPessoais()
 	{
-		this.id = id;
+
 	}
 
 	public String getName()
@@ -48,14 +44,6 @@ public abstract class Pessoa
 	public void setSubscribeDate(Date subscribeDate)
 	{
 		this.subscribeDate = subscribeDate;
-	}
-	
-	public Endereco getEndereco() {
-		return endereco;
-	}
-	
-	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
 	}
 
 }

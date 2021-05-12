@@ -1,7 +1,16 @@
-package main.java.poo_project.entities;
+package mercearia.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+@Entity
 public class Endereco
 {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String estado;
 	private String cidade;
@@ -20,6 +29,11 @@ public class Endereco
 		this.logradrouro = logradrouro;
 		this.numero = numero;
 		this.complemento = complemento;
+	}
+
+	public Endereco()
+	{
+
 	}
 
 	public Long getId()
