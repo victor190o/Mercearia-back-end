@@ -13,5 +13,5 @@ O objetivo do projeto é desenvolver o backend de uma mercearia. É necessário 
 #### 1.1 DIAGRAMA CONCEITUAL
 ![alt text](https://github.com/victor190o/Mercearia-back-end/blob/main/images/conceptual-diagram.PNG)
 
-![GitHub badger](https://img.shields.io/static/v1?label=Java&message=11.0.10&color=Blue&style=for-the-badge&logo=JAVA)
+<img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?&style=for-the-badge&logo=java&logoColor=white"/> 
 
